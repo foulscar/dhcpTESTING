@@ -1,0 +1,27 @@
+FROM ubuntu:24.04
+
+RUN apt update && apt upgrade -y
+RUN apt install -y \
+        isc-dhcp-server \
+        iproute2 \
+        iputils-ping \
+        net-tools \
+        tcpdump \
+        iptables \
+        && apt clean
+
+RUN echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf && sysctl -p
+
+RUN mkdir -p /var/lib/dhcp
+RUN mkdir -p /etc/dhcp
+
+COPY ./config/dhcpd.leases /var/lib/dhcp/dhcpd.leases
+COPY ./config/dhcpd.conf /etc/dhcp/dhcpd.conf
+COPY ./config/isc-dhcp-server /etc/default/isc-dhcp-server
+COPY ./scripts/init.sh /root/init.sh
+
+RUN chmod u+x /root/init.sh
+
+EXPOSE 67/udp 68/udp
+
+ENTRYPOINT ["/root/init.sh"]

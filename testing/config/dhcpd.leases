@@ -1,0 +1,5 @@
+###
+# This file is stored in /var/lib/dhcp/dhcpd.leases on the container.
+# Copying that file while in use and placing it here could save your
+# leases.
+###
