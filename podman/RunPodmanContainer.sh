@@ -20,12 +20,12 @@ if ! command -v podman &> /dev/null; then
 fi
 
 printf "${blue}Removing bridge/veth interfaces"
-printf "${blue}' and creating again\n${normal}"
+printf "${blue} and creating again\n${normal}"
 
 printf "${red}Removing...\n${normal}"
-sudo ip link del dhcp-test-br
-sudo ip link del dhcp-test-veth0
-sudo ip link del dhcp-test-veth1
+sudo ip link del dhcp-test-br 2> /dev/null
+sudo ip link del dhcp-test-veth0 2> /dev/null
+sudo ip link del dhcp-test-veth1 2> /dev/null
 printf "${blue}Creating...\n\n${normal}"
 sudo ip link add dhcp-test-br type bridge
 sudo ip link add dhcp-test-veth0 type veth peer name dhcp-test-veth1
@@ -62,8 +62,8 @@ if ! sudo true; then
         exit 1
 fi
 
-printf "${red}Removing container\n${normal}"
-sudo podman rm dhcp-test
-printf "${red}Deleting bridge/veth interfaces\n${normal}"
+sudo podman rm dhcp-test &> /dev/null
+printf "${red}Removed container\n${normal}"
 sudo ip link del dhcp-test-br
 sudo ip link del dhcp-test-veth0
+printf "${red}Deleted bridge/veth interfaces\n${normal}"
