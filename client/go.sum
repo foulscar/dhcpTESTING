@@ -6,8 +6,8 @@ github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1 h1:q763qf9huN11kDQavWs
 github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1/go.mod h1:Q3SI9o4m/ZMnBNeIyt5eFwwo7qiLfzFZmjNmxjkiQlU=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/foulscar/dhcp v0.0.0-20250302145640-b80224042a1f h1:je3dxPXxUFs+S95zDCGDU3HBRwTKUzF4/FRJ4l3c4wI=
-github.com/foulscar/dhcp v0.0.0-20250302145640-b80224042a1f/go.mod h1:NoH/ZjtwrTDXeiqT0fpJPki7kBbp0Ipdw6aTNO5yLqI=
+github.com/foulscar/dhcp v0.0.0-20250302193337-be9e188930ec h1:Sxb0Q0biO4VyPUsWlct1J6IafdXt1ZdKOQF3ipFoFTY=
+github.com/foulscar/dhcp v0.0.0-20250302193337-be9e188930ec/go.mod h1:NoH/ZjtwrTDXeiqT0fpJPki7kBbp0Ipdw6aTNO5yLqI=
 github.com/manifoldco/promptui v0.9.0 h1:3V4HzJk1TtXW1MTZMP7mdlwbBpIinw3HztaIlYthEiA=
 github.com/manifoldco/promptui v0.9.0/go.mod h1:ka04sppxSGFAtxX0qhlYQjISsg9mR4GWtQEhdbn6Pgg=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

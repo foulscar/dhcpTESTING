@@ -3,7 +3,7 @@ module github.com/dhcpTESTING/client
 go 1.22.2
 
 require (
-	github.com/foulscar/dhcp v0.0.0-20250302145640-b80224042a1f
+	github.com/foulscar/dhcp v0.0.0-20250302193337-be9e188930ec
 	github.com/manifoldco/promptui v0.9.0
 	gopkg.in/ini.v1 v1.67.0
 )

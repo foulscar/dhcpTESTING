@@ -20,6 +20,8 @@ func main() {
 	if err != nil {
 		log.Fatalln("Error building runtime. ", err.Error())
 	}
-
-	rt.PromptMainMenu()
+        defer rt.Conn.Close()
+        
+        rt.Listen()
+	//rt.PromptMainMenu()
 }
