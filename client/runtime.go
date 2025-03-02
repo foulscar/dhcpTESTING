@@ -16,7 +16,7 @@ func (c Config) BuildRuntime() (*Runtime, error) {
 		Clients: make(map[string]Client),
 	}
 
-	conn, err := dhcp.NewDHCPConn(c.Interface, 67, 67)
+	conn, err := dhcp.NewDHCPConn(c.Interface, 67, 68)
 	if err != nil {
 		return nil, fmt.Errorf("error creating connection: %w", err)
 	}

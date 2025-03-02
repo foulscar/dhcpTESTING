@@ -22,6 +22,5 @@ func main() {
 	}
         defer rt.Conn.Close()
         
-        rt.Listen()
-	//rt.PromptMainMenu()
+	rt.PromptMainMenu()
 }
